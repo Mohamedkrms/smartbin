@@ -1,6 +1,7 @@
 'use client';
 
-import { useUserRole, UserRole } from '@/hooks/useUserRole';
+import { useUserRole } from '@/hooks/useUserRole';
+import { UserRole } from '@/lib/supabase';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 

@@ -197,10 +197,7 @@ export function QRScanner({ onScanComplete }: QRScannerProps) {
                   onScan={(result) => handleQRScan(result[0]?.rawValue || '')}
                   onError={handleQRScanError}
                   components={{
-                    audio: false,
                     finder: false,
-                    tracker: true,
-                    torch: false,
                   }}
                   styles={{
                     container: {
@@ -212,12 +209,6 @@ export function QRScanner({ onScanComplete }: QRScannerProps) {
                       height: '100%',
                       objectFit: 'cover',
                     },
-                  }}
-                  options={{
-                    constraints: {
-                      facingMode: 'environment',
-                    },
-                    delayBetweenScanSuccess: 300,
                   }}
                 />
                 <button

@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import { useUser } from '@clerk/nextjs';
-import { supabase, UserRole, User } from '@/lib/supabase';
+import { supabase, User, UserRole } from '@/lib/supabase';
 
 export function useUserRole() {
   const { user: clerkUser, isLoaded } = useUser();
