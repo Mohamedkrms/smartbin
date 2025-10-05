@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import { useUser } from '@clerk/nextjs';
-import { supabase, User, UserRole } from '@/lib/supabase';
+import { supabase, UserRole, User } from '@/lib/supabase';
 
 export function useUserRole() {
   const { user: clerkUser, isLoaded } = useUser();
@@ -88,12 +88,12 @@ export function useUserRole() {
           errorMessage = err.message;
         } else if (typeof err === 'object' && err !== null) {
           // Handle Supabase errors
-          const errorObj = err as any;
+          const errorObj = err as { message?: string; error?: { message?: string } };
           if (errorObj.message) {
             errorMessage = errorObj.message;
           } else if (errorObj.error) {
             errorMessage = errorObj.error;
-          } else if (errorObj.details) {
+          } else if ('details' in errorObj && typeof errorObj.details === 'string') {
             errorMessage = errorObj.details;
           }
         }

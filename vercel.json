@@ -1,0 +1,18 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "outputDirectory": ".next",
+  "functions": {
+    "app/api/**/*.ts": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "env": {
+    "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY": "pk_test_Zmx5aW5nLW11c3RhbmctNTQuY2xlcmsuYWNjb3VudHMuZGV2JA",
+    "CLERK_SECRET_KEY": "sk_test_gc3nT4wJ0o83lYZGT56e0LiLHN5HvaRQeaDtJWNY95",
+    "NEXT_PUBLIC_SUPABASE_URL": "https://prlsgxukwtahbbcrpyar.supabase.co",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBybHNneHVrd3RhaGJiY3JweWFyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk2MDIxOTQsImV4cCI6MjA3NTE3ODE5NH0.tcGlxZulWGZDxGgBF-cAPZcfyXxf9ewQRfoHUQ_Tj8E"
+  }
+}

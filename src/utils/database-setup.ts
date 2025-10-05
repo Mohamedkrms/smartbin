@@ -29,7 +29,7 @@ export async function createUsersTable() {
     console.log('Checking if users table exists...');
     
     // Try to query the users table to see if it exists
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from('users')
       .select('count')
       .limit(1);

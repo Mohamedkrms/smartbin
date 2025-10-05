@@ -40,7 +40,9 @@ export default function RootLayout({
         className={`${inter.variable} ${poppins.variable} ${spaceGrotesk.variable} font-sans antialiased`}
         suppressHydrationWarning
       >
-        <ClerkProvider>
+            <ClerkProvider 
+              publishableKey="pk_test_Zmx5aW5nLW11c3RhbmctNTQuY2xlcmsuYWNjb3VudHMuZGV2JA"
+            >
           <HydrationBoundary>
             {children}
           </HydrationBoundary>
