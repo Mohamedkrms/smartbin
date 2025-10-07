@@ -1,8 +1,8 @@
 import { createClient } from '@supabase/supabase-js'
 
 // Direct database connection - replace with your actual Supabase project details
-const supabaseUrl = 'https://prlsgxukwtahbbcrpyar.supabase.co'
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBybHNneHVrd3RhaGJiY3JweWFyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk2MDIxOTQsImV4cCI6MjA3NTE3ODE5NH0.tcGlxZulWGZDxGgBF-cAPZcfyXxf9ewQRfoHUQ_Tj8E'
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 
 export const supabase = createClient(supabaseUrl, supabaseKey)
 
