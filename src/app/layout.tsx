@@ -40,9 +40,8 @@ export default function RootLayout({
         className={`${inter.variable} ${poppins.variable} ${spaceGrotesk.variable} font-sans antialiased`}
         suppressHydrationWarning
       >
-            <ClerkProvider 
-              publishableKey="pk_test_Zmx5aW5nLW11c3RhbmctNTQuY2xlcmsuYWNjb3VudHMuZGV2JA"
-            >
+         <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY!}>
+
           <HydrationBoundary>
             {children}
           </HydrationBoundary>
